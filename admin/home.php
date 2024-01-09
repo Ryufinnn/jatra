@@ -1,0 +1,281 @@
+<?php
+
+session_start();
+
+if (empty($_SESSION[username]) AND empty($_SESSION[password]) AND empty($_SESSION[idadmin])){
+
+  echo"
+
+ <center>Untuk mengakses modul, Anda harus login <br>";
+
+  echo "<a href=index.php><b>LOGIN</b></a></center>";
+
+}
+
+else{
+
+?>
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title></title>
+
+<link href="css/style_index.css" rel="stylesheet" type="text/css" />
+
+<link href="css/tipsy.css" rel="stylesheet" type="text/css" />
+
+<link href="css/helper.css" media="screen" rel="stylesheet" type="text/css" />
+
+
+
+<link href="css/dropdown.vertical.css" media="screen" rel="stylesheet" type="text/css" />
+
+<link href="css/default.ultimate.css" media="screen" rel="stylesheet" type="text/css" />
+
+<link href="css/tabs.css" rel="stylesheet" type="text/css" />
+
+
+
+<script type="text/javascript" src="js/jquery-1.4.js"></script>
+
+
+
+<script type="text/javascript" src="js/jquery.dropdown.js"></script>
+
+<script type="text/javascript" src="js/tabs.js"></script>
+
+<link href="css/rfnet.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/datetimepicker_css.js"></script>
+
+<script language="javascript" type="text/javascript">
+
+    tinyMCE_GZ.init({
+
+    plugins : 'style,layer,table,save,advhr,advimage, ...',
+
+		themes  : 'simple,advanced',
+
+		languages : 'en',
+
+		disk_cache : true,
+
+		debug : false
+
+});
+
+</script>
+
+<script language="javascript" type="text/javascript" src="../tinymcpuk/tiny_mce_src.js"></script>
+
+<script type="text/javascript">
+
+tinyMCE.init({
+
+		mode : "textareas",
+
+		theme : "advanced",
+
+		plugins : "table,youtube,advhr,advimage,advlink,emotions,flash,searchreplace,paste,directionality,noneditable,contextmenu",
+
+		theme_advanced_buttons1_add : "fontselect,fontsizeselect",
+
+		theme_advanced_buttons2_add : "separator,preview,zoom,separator,forecolor,backcolor,liststyle",
+
+		theme_advanced_buttons2_add_before: "cut,copy,paste,separator,search,replace,separator",
+
+		theme_advanced_buttons3_add_before : "tablecontrols,separator,youtube,separator",
+
+		theme_advanced_buttons3_add : "emotions,flash",
+
+		theme_advanced_toolbar_location : "top",
+
+		theme_advanced_toolbar_align : "left",
+
+		theme_advanced_statusbar_location : "bottom",
+
+		extended_valid_elements : "hr[class|width|size|noshade]",
+
+		file_browser_callback : "fileBrowserCallBack",
+
+		paste_use_dialog : false,
+
+		theme_advanced_resizing : true,
+
+		theme_advanced_resize_horizontal : false,
+
+		theme_advanced_link_targets : "_something=My somthing;_something2=My somthing2;_something3=My somthing3;",
+
+		apply_source_formatting : true
+
+});
+
+
+
+	function fileBrowserCallBack(field_name, url, type, win) {
+
+		var connector = "../../filemanager/browser.html?Connector=connectors/php/connector.php";
+
+		var enableAutoTypeSelection = true;
+
+		
+
+		var cType;
+
+		tinymcpuk_field = field_name;
+
+		tinymcpuk = win;
+
+		
+
+		switch (type) {
+
+			case "image":
+
+				cType = "Image";
+
+				break;
+
+			case "flash":
+
+				cType = "Flash";
+
+				break;
+
+			case "file":
+
+				cType = "File";
+
+				break;
+
+		}
+
+		
+
+		if (enableAutoTypeSelection && cType) {
+
+			connector += "&Type=" + cType;
+
+		}
+
+		
+
+		window.open(connector, "tinymcpuk", "modal,width=600,height=400");
+
+	}
+
+</script>
+
+
+
+<style type="text/css">
+
+#pimg {
+
+	display: none;
+
+	position: absolute;
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+<div id="wrapper">
+
+<div id="header">
+
+
+
+</div>
+
+<div id="content">
+
+<div id="contentkiri">
+
+<?php
+
+include"kiri.php";
+
+?>
+
+
+
+</div>
+
+<div id="contentkanan">
+
+<?php
+
+include"kanan.php";
+
+?>
+
+
+
+</div>
+
+<div id="clearer"></div>
+
+</div>
+
+
+
+<div id="footer">
+
+<marquee width="300px"><font color="#FFFFFF"></font></marquee>
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+</body>
+
+</html>
+
+<script type="text/javascript" src='js/jquery.equalizecols.js'></script>
+
+<script type="text/javascript">
+
+     $(document).ready(function() {
+
+	       
+
+		   // $("#contentkiri,#contentkanan").equalizeCols();
+
+
+
+
+
+		   
+
+      });
+
+    </script>
+
+<?php
+
+}
+
+?>	

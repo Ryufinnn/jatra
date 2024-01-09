@@ -1,0 +1,50 @@
+#wrapper {
+	width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#wrapper #kepala {
+	float: left;
+	height: 80px;
+	width: 600px;
+	background-image: url(../images/pemberitahuan.png);
+}
+#wrapper #tengah {
+	margin-top: 5px;
+	float: left;
+	width: 600px;
+}
+
+.xtop, .xbottom {display:block; background:transparent;}
+.xb1, .xb2, .xb3, .xb4 {display:block; overflow:hidden;}
+.xb1, .xb2, .xb3 {height:1px;}
+.xb2, .xb3, .xb4 {background:#FFF; border-left:1px solid #CCC; border-right:1px solid #CCC;}
+.xb1 {margin:0 5px; background:#CCC;}
+.xb2 {margin:0 3px; border-width:0 2px;}
+.xb3 {margin:0 2px;}
+.xb4 {height:2px; margin:0 1px;}
+.xboxcontent {
+	display:block;
+	background:#FFF;
+	padding:10px;
+	border-top-width: 0;
+	border-right-width: 1px;
+	border-bottom-width: 0;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}
+#wrapper #kaki {
+	float: left;
+	width: 600px;
+	margin-top: 4px;
+	background-color: #9933FF;
+	height: 20px;
+}
+

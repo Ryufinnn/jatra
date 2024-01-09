@@ -1,0 +1,101 @@
+
+ #tabsview {
+    display: block;
+    float: left;
+    width:auto;
+	  font-size:10px;
+}
+.panel {
+	background-color:;
+	padding: 0px 0 0 0px;
+	width: 600px;
+	overflow: auto;
+	clear: left;
+	height:auto;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #FF3300;
+	border-right-color: #FF3300;
+	border-bottom-color: #FF3300;
+	border-left-color: #FF3300;
+}
+.tab_bdr {
+    padding: 0px;
+    width:680px;
+    border: 0px;
+    border: 1px solid #FF3300;
+    height: 4px;
+    margin:0px;
+    background: #FF3300;
+    clear: left;
+    font-size: 0px;
+}
+
+
+.panel1 {
+    border: solid 1px #FF3300;
+    border-top: none;
+    background-color: #f3f3f3;
+    padding: 0px 0 0 0px;
+    width: 680px;
+    overflow: auto;
+    clear: left;
+	height:auto;
+}
+.tab_bdr1 {
+    padding: 0px;
+    width: 680px;
+    border: 0px;
+    border: 1px solid #FF3300;
+    height: 4px;
+    margin:0px;
+    background: #FF3300;
+    clear: left;
+    font-size: 0px;
+}
+
+
+
+.tab {
+	
+    font-size: 12px;
+    background:#999;
+    color: #FFF;
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+    height: 19px;
+    padding-top: 3px;
+    margin: 0px;
+    width:200px;
+    float:left;
+    text-decoration: none;
+  	font-weight:bold;
+}
+.tab_sel {
+    
+	  font-weight:bold;
+    font-size: 12px;
+    background:#FF3300;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid #FF3300;
+    height: 19px;
+    padding-top: 3px;
+    margin: 0px;
+    width:200px;
+    float: left;
+    text-decoration: none;
+		
+}
+.tabjudul {
+	font-size:14px;
+}
+
